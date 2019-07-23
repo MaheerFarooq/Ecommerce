@@ -1,0 +1,240 @@
+/**
+ * @license
+ * Copyright 2014 Boltreactor. All rights reserved.
+ *
+ */
+
+/* TABLE OF CONTENTS
+ * -----Main Layout: It include rules for body and html tags.
+ * -----Primary Navigation: It include rules for headers.
+ * -----Secondary Navigation: It include rules for side and right navigation.
+ * -----Tertiary Navigation: It include rules for footers.
+ * -----Menu Items: It include rules for menu items.
+ */
+.mdl-color-text--primary {
+    color: #6200ee !important;
+}
+/*
+ * Rules for main layout.
+ */
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background: #fff;
+    width: 100%;
+    min-height: 100%;
+    color: #525c65;
+    cursor: auto;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.mdl-layout {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    z-index: 0;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease;
+    background: #fff;
+}
+/*
+ * Rules for primary navigation.
+ */
+.mdl-header {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 16px;
+    max-width: 100%;
+    transition: 0.3s all;
+}
+.mdl-header a {
+    font-weight: 400 !important;
+}
+.mdl-header.md-hdr-fixed--search,
+.mdl-header.mdl-header--fixed {
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 5;
+}
+/* Add block. */
+.glue-app-ready {
+    height: 56px;
+}
+.mdl-header.md-shadow {
+    -webkit-box-shadow: 0 1px 20px 0 rgba(46,61,73,.2);
+    box-shadow: 0 1px 20px 0 rgba(46,61,73,.2);
+    /* -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12), inset 0 -1px 0 0 #E6E6E6;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12), inset 0 -1px 0 0 #E6E6E6; */
+}
+.mdl-header.md-platform {
+    background: rgb(59, 120, 231)!important;
+}
+.mdl-header:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.mdl-header--pro {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 16px;
+    max-width: 100%;
+    transition: 0.3s all;
+}
+.mdl-header--48 {
+    height: 48px;
+}
+.mdl-header--56 {
+    height: 56px;
+}
+.mdl-header--60 {
+    height: 60px;
+}
+.mdl-header--64 {
+    height: 64px;
+}
+.mdl-header--64.md-adaptive {
+    height: 64px;
+}
+.mdl-header--69 {
+    height: 69px;
+}
+.mdl-header__brand-section,
+.mdl-header__navigation-section,
+.mdl-header__navigation-section-sm {
+    display: block;
+    width: 100%;
+}
+.mdl-header--48 .mdl-header__navigation {
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+}
+.mdl-header--56 .mdl-header__navigation {
+    position: relative;
+    height: 56px;
+    line-height: 56px;
+}
+.mdl-header--60 .mdl-header__navigation {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+}
+.mdl-header--64 .mdl-header__navigation {
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+}
+.mdl-header--64.md-adaptive .mdl-header__navigation {
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+}
+.mdl-header__navigation-brand {
+    display: block;
+    padding: 0 19px;
+    padding-top: 3px;
+}
+.mdl-header__navigation-item {
+    display: block;
+    padding: 0 19px;
+}
+/* Note: Rules for menu item to trigger side navigation. */
+.mdl-header__navigation-item.menu-item {
+    padding: 0 8px;
+}
+@media (max-width: 743px) {
+    .mdl-header__navigation-item,
+    .mdl-header__navigation-brand {
+        padding: 0 14px;
+    }
+    .md-platform .mdl-header__navigation-item,
+    .md-platform .mdl-header__navigation-brand {
+        padding: 0 8px;
+    }
+    .mdl-header__navigation-brand .mdl-typography--display-2 {
+        line-height: inherit;
+    }
+    /* Note: Rules for menu item to trigger side navigation. */
+    .mdl-header__navigation-item.menu-item {
+        padding: 0 2px;
+    }
+}
+@media (max-width: 704px) {
+    .mdl-header--64.md-adaptive {
+        height: 56px;
+    }
+    .mdl-header--64.md-adaptive .mdl-header__navigation {
+        position: relative;
+        height: 56px;
+        line-height: 56px;
+    }
+}
+/* Rules for instant drop-down-menu */
+.mdl-header--56 .comp-menu {
+  top: 56px;
+}
+.comp:hover:not(.no-hover) .comp-menu {
+    display: block;
+}
+.comp-menu {
+    position: absolute;
+    z-index: 3001;
+    left: auto;
+    right: -1px;
+    display: none;
+    min-width: 282px;
+    max-width: 460px;
+    line-height: normal;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+/*
+ * Rules for secondary navigation (side & right navigation).
+ */
+
+/*
+ * Rules for tertiary navigation (footers).
+ */
+.mdl-core-footer {
+    border-top: 1px solid #dbe2e8;
+    max-width: 960px;
+    margin: 30px auto 80px;
+    padding: 30px 0 0;
+}
+.mdl-core-footer a {
+    color: #767676;
+    font-size: 14px;
+    padding: .1rem;
+    font-weight: 400;
+}
+.mdl-core-footer li {
+    margin: 0 .75rem;
+}
+@media only screen and (max-width: 640px) {
+    .mdl-core-footer {
+        margin: 2rem auto;
+    }
+}
+
+/*
+ * Rules for menu items (Menus).
+ */
+.mdl-header__navigation .mdl-menu--primary {
+    width: 210px !important;
+}
+.mdl-menu--fab {
+    width: 210px !important;
+}
+.md-has-menu-item-icons .material-icons {
+    vertical-align:middle;margin-right:16px;
+}

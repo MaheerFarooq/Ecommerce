@@ -1,0 +1,356 @@
+/**
+ * @license
+ * Copyright 2014 Boltreactor. All rights reserved.
+ *
+ */
+
+/* TABLE OF CONTENTS
+ * -----Banner [full-bleed + mobile apps, watch-live]
+ * -----Promor, Learn more
+ * -----Cards [Tiles]
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ * -----
+ */
+
+/*
+ * Rules for Banners [full-bleed].
+ */
+.mdl-full-bleed {
+    background-color: #f5f5f5;
+    margin-left: 0;
+    margin-right: 0;
+}
+.mdl-full-bleed__image-container {
+    background-position: top center;
+    background-size: cover;
+    height: 85px;
+    position: relative
+}
+.mdl-full-bleed__info-box {
+    padding: 24px 16px
+}
+.mdl-full-bleed__headline {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+@media (min-width: 600px) {
+    .mdl-full-bleed__image-container {
+        height: 205px
+    }
+}
+@media (min-width: 1024px) {
+    .mdl-full-bleed {
+        border-bottom: 0;
+        height: 384px;
+        position: relative;
+    }
+    .mdl-full-bleed__image-container {
+        background-position: center;
+        background-size: cover;
+        height: 100%
+    }
+    .mdl-full-bleed__image-container--overlay:before {
+        background:rgba(0,0,0,0.5);
+        content:'';
+        display:block;
+        height:100%;
+        width:100%;
+        z-index:1
+    }
+    .mdl-full-bleed__info-box {
+        position:absolute;
+        left:50%;
+        top:50%;
+        -webkit-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%);
+        -ms-flex-preferred-size:72.92401%;
+        flex-basis:72.92401%;
+        width:72.92401%;
+        padding:0
+    }
+    .mdl-full-bleed__headline.mdl-headline {
+        font-size:44px;
+        letter-spacing:-.5px;
+        line-height:52px
+    }
+    .mdl-full-bleed__headline {
+        padding:0;
+        color: #fff;
+    }
+    .mdl-full-bleed__info-box p {
+        color: #fff;
+    }
+}
+
+/*
+ * Rules for download mobile apps block.
+ */
+.mdl-app-icon {
+    display: inline-block;
+    margin-left: 7px;
+    margin-right: 7px;
+    vertical-align: top;
+    width: 120px;
+}
+.mdl-app-icon--play-store img {
+    margin-left: -9px;
+    margin-top: -9px;
+    max-width: calc(100% + 16px);
+}
+.mdl-app-icon--app-store img {
+    width: 120px;
+}
+@media (min-width: 600px) {
+    .mdl-app-icon {
+        margin-left: 4px;
+        margin-right: 4px;
+        width: 140px;
+    }
+    .mdl-app-icon--app-store img {
+        width: 140px;
+    }
+}
+@media (min-width: 1024px) {
+    .mdl-app-icon {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .mdl-full-bleed__link {
+        margin-top: 12px;
+    }
+    .mdl-full-bleed__link {
+        border-color: #fff;
+        color: #fff;
+    }
+    .mdl-full-bleed__link:visited {
+        border-color: #bdbdbd;
+        color: #bdbdbd;
+    }
+}
+
+/*
+ * Rules for banners [Watch - Live]
+ */
+.mdl-banner {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.mdl-banner.md-watch-live {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* margin-bottom: 40px; */
+    background: #1226aa;
+    -webkit-box-shadow: 12px 15px 20px 0 rgba(0,0,0,.27);
+    box-shadow: 12px 15px 20px 0 rgba(0,0,0,.27);
+    border-radius: 6px;
+    padding: 10px 36px;
+}
+.mdl-banner .md-main-logo {
+    display: block;
+    height: 54px;
+}
+.mdl-banner .md-description {
+    color: #fff;
+    letter-spacing: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 24px;
+    margin-left: 24px;
+    border-left: 1px solid hsla(0,0%,100%,.4);
+    display: inline-block;
+}
+.mdl-banner .md-action {
+    background: #ffb400 !important;
+    color: #fff;
+    position: relative;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+@media (max-width: 743px) {
+    .mdl-banner .md-main-logo {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    .mdl-banner .md-description {
+        margin-left: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 16px;
+        border-left: none;
+        text-align: center;
+    }
+    .mdl-banner.md-watch-live {
+        webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 18px;
+        padding-bottom: 16px;
+    }
+}
+
+/*
+ * Rules for Promo.
+ */
+.mdl-promo {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.mdl-promo .left,
+.mdl-promo .right {
+    background: linear-gradient(36deg, #0dd3ff, #0389ff, #1c79c0);
+    flex: 1 1 50%;
+    padding: 4px 0;
+    display: block;
+    text-transform: none;
+    font-weight: 300;
+}
+.mdl-promo .right::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10px;
+    background: #fff;
+    width: 20px;
+    height: 120%;
+    transform: rotate(20deg);
+}
+.mdl-promo .description {
+    font-size: 20px;
+}
+.mdl-promo .description,
+.mdl-promo .link {
+    color: white;
+    line-height: 1.5;
+    position: relative;
+}
+.mdl-promo .link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 20px;
+    text-transform: uppercase;
+    vertical-align: center;
+}
+.mdl-promo .link::after {
+    background: url(/images/static/md-arrow.svg) center/cover no-repeat;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    margin-left: 10px;
+    width: 10px;
+}
+.mdl-promo  a {
+    letter-spacing: .56px;
+    line-height: 16px;
+    position: relative;
+    text-decoration: none;
+}
+.desktop-up, .desktop-only {
+    display: none;
+    visibility: hidden;
+}
+@media only screen and (min-width: 957px) {
+    .desktop-up, .desktop-only {
+        display: block;
+        visibility: visible;
+    }
+}
+.mobile-down {
+    display: none;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 957px) {
+    .mobile-down {
+        display: block;
+        visibility: visible;
+    }
+}
+
+/*
+ * Rules for Learn more.
+ */
+.mdl-learn-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 24px 20px;
+    background-color: #2A76F0;
+    color: #FFFFFF;
+}
+.mdl-learn-more .description p {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+}
+.mdl-learn-more a {
+    display: inline;
+    vertical-align: bottom;
+    margin-left: 4px;
+}
+.mdl-learn-more .box {
+    display: flex;
+}
+
+/*
+ * Rules for tiles.
+ */
+.mdl-tile {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    margin-bottom: 16px;
+    min-height: auto;
+    text-align: center;
+    padding: 0;
+}
+.mdl-tile__header {
+    /*min-height: 153px;*/
+    position: relative;
+    padding: 24px 24px 0 24px;
+    margin-bottom: 0;
+    min-height: auto;
+    overflow: visible;
+}
+.mdl-tile__body {
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 24px;
+    padding-bottom: 24px;
+}

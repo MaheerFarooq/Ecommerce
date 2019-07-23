@@ -1,0 +1,44 @@
+application: keblog-223412
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+ 
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /style
+  static_dir: style
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /images
+  static_dir: images
+
+- url: /login
+  script: Login.app
+
+- url: /script
+  static_dir: script
+
+- url: .*
+  script: Routes.app
+  secure: always
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest
+
+- name: ssl
+  version: latest
+
+env_variables:
+  SEND_GRID_KEY: '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'
+  SEND_GRID_EMAIL: 'developers@kompassera.com'
